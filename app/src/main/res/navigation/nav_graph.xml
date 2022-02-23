@@ -7,7 +7,7 @@
 
     <fragment
         android:id="@+id/saveNoteFragment"
-        android:name="com.example.todoapp.SaveNoteFragment"
+        android:name="com.example.todoapp.ui.fragments.SaveNoteFragment"
         android:label="fragment_save_note"
         tools:layout="@layout/fragment_save_note" >
         <action
@@ -16,12 +16,12 @@
     </fragment>
     <fragment
         android:id="@+id/updateNoteFragment"
-        android:name="com.example.todoapp.UpdateNoteFragment"
+        android:name="com.example.todoapp.ui.fragments.UpdateNoteFragment"
         android:label="fragment_update_note"
         tools:layout="@layout/fragment_update_note" />
     <fragment
         android:id="@+id/homeFragment"
-        android:name="com.example.todoapp.HomeFragment"
+        android:name="com.example.todoapp.ui.fragments.HomeFragment"
         android:label="fragment_home"
         tools:layout="@layout/fragment_home" >
         <action
