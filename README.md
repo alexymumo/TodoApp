@@ -21,12 +21,13 @@ Build System: [Gradle](https://gradle.org/)
 ## Architecture
 - The app is build with MVVM architecture to allow separation of concerns to allow data not to be destroyed over configuration changes.
 <img src="assets/architecture.png">
+
 ## Introduction
 - Room provides abstraction layer over SQLite to allow fluent database access
 - Room has three main components:
-  Entity - represents tables in the database. Annotated with @Entity
-  Data Access Objects(Dao) - A mapping of SQL queries to functions. Annotated with @Dao
-  Room Database - Acts as the main access point to the underlying SQLite database.
+*  Entity - represents tables in the database. Annotated with @Entity
+*  Data Access Objects(Dao) - A mapping of SQL queries to functions. Annotated with @Dao
+*  Room Database - Acts as the main access point to the underlying SQLite database.
 
 ## Libraries
 * [Navigation Components](https://developer.android.com/guide/navigation/navigation-getting-started) - provides simple navigation across the app 
