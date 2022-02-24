@@ -12,13 +12,13 @@ class NoteViewModel(private val noteRepository: NoteRepository): ViewModel() {
 
     val getAllNotes: LiveData<List<Note>> = noteRepository.fetchAllNotes()
 
-    suspend fun saveNote(note: Note) = viewModelScope.launch(Dispatchers.IO){
+    fun saveNote(note: Note) = viewModelScope.launch(Dispatchers.IO){
         noteRepository.saveNote(note)
     }
-    suspend fun deleteNote(note: Note) = viewModelScope.launch(Dispatchers.IO){
+    fun deleteNote(note: Note) = viewModelScope.launch(Dispatchers.IO){
         noteRepository.deleteNote(note)
     }
-    suspend fun updateNote(note: Note) = viewModelScope.launch(Dispatchers.IO){
+    fun updateNote(note: Note) = viewModelScope.launch(Dispatchers.IO){
         noteRepository.updateNote(note)
     }
 }

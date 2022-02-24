@@ -4,11 +4,13 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.TextView
+import androidx.navigation.Navigation
 import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
 import com.example.todoapp.R
 import com.example.todoapp.data.entity.Note
+import com.example.todoapp.ui.fragments.HomeFragmentDirections
 
 class NoteRecyclerView: ListAdapter<Note, NoteRecyclerViewHolder>(NoteComparator()) {
 
@@ -23,12 +25,20 @@ class NoteRecyclerView: ListAdapter<Note, NoteRecyclerViewHolder>(NoteComparator
         val note = getItem(position)
         holder.title.text = note.title
         holder.description.text = note.description
+        holder.itemView.setOnClickListener{
+            Navigation.findNavController(it)
+                .navigate(
+                    HomeFragmentDirections
+                        .actionHomeFragmentToUpdateNoteFragment()
+                )
+        }
     }
 }
 
 class NoteRecyclerViewHolder(itemView: View): RecyclerView.ViewHolder(itemView) {
     val title: TextView = itemView.findViewById(R.id.title)
     val description: TextView = itemView.findViewById(R.id.description)
+
 
 
 }

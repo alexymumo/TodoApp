@@ -10,7 +10,7 @@ import com.example.todoapp.data.entity.Note
 @Database(entities = [Note::class], exportSchema = false, version = 1)
 abstract class NoteDatabase: RoomDatabase() {
 
-    abstract fun noteDao(): NoteDao
+    abstract val noteDao: NoteDao
 
     companion object{
         @Volatile

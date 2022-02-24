@@ -5,6 +5,7 @@ import androidx.lifecycle.ViewModelProvider
 import com.example.todoapp.data.repository.NoteRepository
 import java.lang.IllegalArgumentException
 
+@Suppress("UNCHECKED_CAST")
 class NoteViewModelFactory(private val noteRepository: NoteRepository): ViewModelProvider.Factory {
     override fun <T : ViewModel?> create(modelClass: Class<T>): T {
         if (modelClass.isAssignableFrom(NoteViewModel::class.java)){

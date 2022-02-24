@@ -1,19 +1,19 @@
 package com.example.todoapp.data.repository
 
-import com.example.todoapp.data.dao.NoteDao
+import com.example.todoapp.data.db.NoteDatabase
 import com.example.todoapp.data.entity.Note
 
-class NoteRepository(private val noteDao: NoteDao) {
+class NoteRepository(private val noteDatabase: NoteDatabase) {
 
-    fun fetchAllNotes() = noteDao.fetchAllNotes()
+    fun fetchAllNotes() = noteDatabase.noteDao.fetchAllNotes()
 
     suspend fun deleteNote(note: Note){
-        noteDao.deleteNote(note)
+        noteDatabase.noteDao.deleteNote(note)
     }
     suspend fun updateNote(note: Note) {
-        noteDao.updateNote(note)
+        noteDatabase.noteDao.updateNote(note)
     }
     suspend fun saveNote(note: Note){
-        noteDao.saveNote(note)
+        noteDatabase.noteDao.saveNote(note)
     }
 }
