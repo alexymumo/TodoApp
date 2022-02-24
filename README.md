@@ -9,6 +9,7 @@ Build System: [Gradle](https://gradle.org/)
 ## Table of Contents
 - [Prerequisite](#prerequisite)
 - [Architecture](#architecture)
+- [Introduction](#introduction)
 - [Libraries](#libraries)
 - [Screenshots](#screenshots)
 
@@ -20,6 +21,12 @@ Build System: [Gradle](https://gradle.org/)
 ## Architecture
 - The app is build with MVVM architecture to allow separation of concerns to allow data not to be destroyed over configuration changes.
 <img src="assets/architecture.png">
+## Introduction
+- Room provides abstraction layer over SQLite to allow fluent database access
+- Room has three main components:
+  Entity - represents tables in the database. Annotated with @Entity
+  Data Access Objects(Dao) - A mapping of SQL queries to functions. Annotated with @Dao
+  Room Database - Acts as the main access point to the underlying SQLite database.
 
 ## Libraries
 * [Navigation Components](https://developer.android.com/guide/navigation/navigation-getting-started) - provides simple navigation across the app 
@@ -28,12 +35,13 @@ Build System: [Gradle](https://gradle.org/)
 * [View Binding](https://developer.android.com/topic/libraries/data-binding) - Jetpack library for binding with views
 * [kotlinx.coroutines](https://github.com/Kotlin/kotlinx.coroutines) - Library support for coroutines.
 * [Material Design](https://material.io/develop/android/docs/getting-started/) - Build awesome beautiful UIs.
+* [LiveData](https://developer.android.com/topic/libraries/architecture/livedata) - Lifecycle aware.
 
 ## Screenshots
-# Save Note
+## Save Note
 
-# Delete Note 
+## Delete Note 
 
-# Update Note
+## Update Note
 
-# All Notes
+## All Notes
