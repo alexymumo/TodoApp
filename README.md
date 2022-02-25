@@ -37,12 +37,11 @@ Build System: [Gradle](https://gradle.org/)
 * [kotlinx.coroutines](https://github.com/Kotlin/kotlinx.coroutines) - Library support for coroutines.
 * [Material Design](https://material.io/develop/android/docs/getting-started/) - Build awesome beautiful UIs.
 * [LiveData](https://developer.android.com/topic/libraries/architecture/livedata) - Lifecycle aware.
-
+* [Timber](https://jakewharton.github.io/timber/docs/5.x/) - Logger with small and extensible API which provides on top normal Android normal Log class
 ## Screenshots
-## Save Note
+<img src="assets/save.png">
+<img src="assets/delete.png">
+<img src="assets/update.png">
+<img src="assets/all.png">
+<img src="assets/empy.png">
 
-## Delete Note 
-
-## Update Note
-
-## All Notes

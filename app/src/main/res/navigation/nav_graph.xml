@@ -22,6 +22,15 @@
         <action
             android:id="@+id/action_updateNoteFragment_to_homeFragment"
             app:destination="@id/homeFragment" />
+        <argument
+            android:name="id"
+            app:argType="integer"/>
+        <argument
+            android:name="title"
+            app:argType="string" />
+        <argument
+            android:name="description"
+            app:argType="string" />
     </fragment>
     <fragment
         android:id="@+id/homeFragment"

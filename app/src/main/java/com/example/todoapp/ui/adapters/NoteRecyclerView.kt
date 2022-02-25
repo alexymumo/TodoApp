@@ -29,7 +29,7 @@ class NoteRecyclerView: ListAdapter<Note, NoteRecyclerViewHolder>(NoteComparator
             Navigation.findNavController(it)
                 .navigate(
                     HomeFragmentDirections
-                        .actionHomeFragmentToUpdateNoteFragment()
+                        .actionHomeFragmentToUpdateNoteFragment(note.id, note.title, note.description)
                 )
         }
     }
@@ -47,6 +47,7 @@ class NoteComparator: DiffUtil.ItemCallback<Note>() {
     override fun areItemsTheSame(oldItem: Note, newItem: Note): Boolean {
         return oldItem.id == newItem.id
     }
+
 
     override fun areContentsTheSame(oldItem: Note, newItem: Note): Boolean {
         return oldItem == newItem

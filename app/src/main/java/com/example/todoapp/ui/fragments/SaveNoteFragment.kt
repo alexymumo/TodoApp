@@ -5,7 +5,6 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.Toast
 import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.fragment.findNavController
 import com.example.todoapp.R
@@ -15,6 +14,7 @@ import com.example.todoapp.data.repository.NoteRepository
 import com.example.todoapp.databinding.FragmentSaveNoteBinding
 import com.example.todoapp.ui.viewmodel.NoteViewModel
 import com.example.todoapp.ui.viewmodel.NoteViewModelFactory
+import com.shashank.sony.fancytoastlib.FancyToast
 
 class SaveNoteFragment : Fragment() {
     private lateinit var noteViewModel: NoteViewModel
@@ -42,7 +42,13 @@ class SaveNoteFragment : Fragment() {
                     binding.description.error = "Cannot be empty"
                 }else -> {
                     noteViewModel.saveNote(Note(0, title, description))
-                    Toast.makeText(activity, "Note Saved", Toast.LENGTH_SHORT).show()
+                    FancyToast.makeText(
+                        activity,
+                        "Note Saved",
+                        FancyToast.LENGTH_LONG,
+                        FancyToast.SUCCESS,
+                        true
+                    ).show()
                     findNavController().navigate(R.id.action_saveNoteFragment_to_homeFragment)
                 }
             }

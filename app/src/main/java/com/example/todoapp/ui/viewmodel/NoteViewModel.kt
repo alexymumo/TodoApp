@@ -8,7 +8,7 @@ import com.example.todoapp.data.repository.NoteRepository
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 
-class NoteViewModel(private val noteRepository: NoteRepository): ViewModel() {
+class NoteViewModel (private val noteRepository: NoteRepository): ViewModel() {
 
     val getAllNotes: LiveData<List<Note>> = noteRepository.fetchAllNotes()
 
