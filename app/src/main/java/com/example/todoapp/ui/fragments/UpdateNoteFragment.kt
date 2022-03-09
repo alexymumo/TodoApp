@@ -15,8 +15,10 @@ import com.example.todoapp.databinding.FragmentUpdateNoteBinding
 import com.example.todoapp.ui.viewmodel.NoteViewModel
 import com.example.todoapp.ui.viewmodel.NoteViewModelFactory
 import com.shashank.sony.fancytoastlib.FancyToast
+import dagger.hilt.android.AndroidEntryPoint
 
 
+@AndroidEntryPoint
 class UpdateNoteFragment : Fragment() {
     private lateinit var noteViewModel: NoteViewModel
     private lateinit var binding: FragmentUpdateNoteBinding
