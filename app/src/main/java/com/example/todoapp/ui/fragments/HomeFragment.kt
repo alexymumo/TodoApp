@@ -15,7 +15,9 @@ import com.example.todoapp.databinding.FragmentHomeBinding
 import com.example.todoapp.ui.adapters.NoteRecyclerView
 import com.example.todoapp.ui.viewmodel.NoteViewModel
 import com.example.todoapp.ui.viewmodel.NoteViewModelFactory
+import dagger.hilt.android.AndroidEntryPoint
 
+@AndroidEntryPoint
 class HomeFragment : Fragment() {
     private lateinit var noteViewModel: NoteViewModel
     private lateinit var binding: FragmentHomeBinding

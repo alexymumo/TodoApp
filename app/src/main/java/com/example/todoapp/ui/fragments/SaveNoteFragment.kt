@@ -15,7 +15,9 @@ import com.example.todoapp.databinding.FragmentSaveNoteBinding
 import com.example.todoapp.ui.viewmodel.NoteViewModel
 import com.example.todoapp.ui.viewmodel.NoteViewModelFactory
 import com.shashank.sony.fancytoastlib.FancyToast
+import dagger.hilt.android.AndroidEntryPoint
 
+@AndroidEntryPoint
 class SaveNoteFragment : Fragment() {
     private lateinit var noteViewModel: NoteViewModel
     private lateinit var binding: FragmentSaveNoteBinding
