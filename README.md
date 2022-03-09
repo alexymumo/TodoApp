@@ -7,6 +7,7 @@ Minimum Api supported: 21 [Supports Over 87% Devices](https://developer.android.
 Build System: [Gradle](https://gradle.org/)
 
 ## Table of Contents
+- [AbouttheApp](#abouttheapp)
 - [Prerequisite](#prerequisite)
 - [Architecture](#architecture)
 - [Introduction](#introduction)
