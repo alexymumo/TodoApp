@@ -4,7 +4,7 @@ import com.example.todoapp.data.db.NoteDatabase
 import com.example.todoapp.data.entity.Note
 
 
-class NoteRepository (private val noteDatabase: NoteDatabase) {
+class NoteRepository(private val noteDatabase: NoteDatabase) {
 
     fun fetchAllNotes() = noteDatabase.noteDao.fetchAllNotes()
 
