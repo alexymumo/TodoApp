@@ -6,7 +6,6 @@ import com.example.todoapp.data.entity.Note
 
 @Dao
 interface NoteDao {
-    /*Data Access Objects code*/
     @Query("SELECT *FROM note_table ORDER BY title ASC")
     fun fetchAllNotes(): LiveData<List<Note>>
 
