@@ -12,21 +12,21 @@ import com.example.todoapp.data.entity.Note
     exportSchema = false,
     version = 1
 )
-abstract class NoteDatabase: RoomDatabase() {
+abstract class NoteDatabase : RoomDatabase() {
 
     abstract val noteDao: NoteDao
 
-    companion object{
+    companion object {
         @Volatile
         private var INSTANCE: NoteDatabase? = null
 
-        fun getDatabase(context: Context): NoteDatabase{
-            return INSTANCE ?: synchronized(this){
+        fun getDatabase(context: Context): NoteDatabase {
+            return INSTANCE ?: synchronized(this) {
                 val instance = Room.databaseBuilder(
                     context.applicationContext,
                     NoteDatabase::class.java,
                     "note.db"
-                ).build()
+                ).fallbackToDestructiveMigration().build()
                 INSTANCE = instance
                 instance
             }
