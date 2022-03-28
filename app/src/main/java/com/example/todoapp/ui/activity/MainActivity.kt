@@ -1,7 +1,7 @@
 package com.example.todoapp.ui.activity
 
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import androidx.appcompat.app.AppCompatActivity
 import com.example.todoapp.databinding.ActivityMainBinding
 import dagger.hilt.android.AndroidEntryPoint
 
