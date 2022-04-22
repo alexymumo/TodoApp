@@ -45,14 +45,20 @@ dependencies {
     //Room
     implementation "androidx.room:room-runtime:2.4.2"
     implementation "androidx.room:room-ktx:2.4.2"
+    annotationProcessor "androidx.room:room-compiler:2.4.2"
     implementation 'androidx.legacy:legacy-support-v4:1.0.0'
     kapt "androidx.room:room-compiler:2.4.2"
+    testImplementation "androidx.room:room-testing:2.4.2"
 
-    // runBlockingTest, CoroutineDispatcher
+    // Coroutine
     testImplementation "org.jetbrains.kotlinx:kotlinx-coroutines-test:1.5.2"
+    implementation 'org.jetbrains.kotlinx:kotlinx-coroutines-core:1.5.0'
+    implementation 'org.jetbrains.kotlinx:kotlinx-coroutines-android:1.6.0'
+
 
     // InstantTaskExecutorRule
     testImplementation "androidx.arch.core:core-testing:2.1.0"
+    testImplementation "androidx.arch.core:core-testing:$arch_version"
 
     //Navigation
     implementation "androidx.navigation:navigation-fragment-ktx:2.4.2"

@@ -14,7 +14,6 @@ import kotlinx.coroutines.ExperimentalCoroutinesApi
 import kotlinx.coroutines.runBlocking
 import org.junit.After
 import org.junit.Before
-import org.junit.Rule
 import org.junit.Test
 import org.junit.runner.RunWith
 import java.io.IOException
@@ -40,17 +39,33 @@ class NoteDatabaseTest : TestCase() {
 
     // execute after every test case
     @After
-    @Throws(IOException::class)
     fun closeDb() {
         noteDatabase.close()
     }
 
     // test case to save a note
     @Test
-    // @Throws(Exception::class)
     fun saveNoteTestCase() = runBlocking {
         val note = Note(1, "Linux", "Learn processes")
         noteDao.saveNote(note)
+        val notes = noteDao.fetchAllNotes()
+        assertThat(notes)
+    }
+
+    @Test
+    fun deleteNoteTest() = runBlocking {
+        val note = Note(1, "Linux", "Learn processes")
+        noteDao.saveNote(note)
+        noteDao.deleteNote(note)
+        val notes = noteDao.fetchAllNotes()
+        assertThat(notes)
+    }
+    @Test
+    fun updateNoteTest() = runBlocking{
+        val note = Note(1, "Linux", "Learn processes")
+        noteDao.saveNote(note)
+        val newNote = note.copy(title = "Kotlin")
+        noteDao.updateNote(newNote)
         val notes = noteDao.fetchAllNotes()
         assertThat(notes)
     }
