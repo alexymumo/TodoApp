@@ -4,41 +4,54 @@ import android.content.Context
 import androidx.room.Room
 import androidx.test.core.app.ApplicationProvider
 import androidx.test.ext.junit.runners.AndroidJUnit4
+import androidx.test.filters.SmallTest
 import com.example.todoapp.data.dao.NoteDao
 import com.example.todoapp.data.db.NoteDatabase
 import com.example.todoapp.data.entity.Note
+import com.google.common.truth.Truth.assertThat
 import junit.framework.TestCase
+import kotlinx.coroutines.ExperimentalCoroutinesApi
 import kotlinx.coroutines.runBlocking
 import org.junit.After
 import org.junit.Before
+import org.junit.Rule
 import org.junit.Test
 import org.junit.runner.RunWith
+import java.io.IOException
+import kotlin.jvm.Throws
 
 @RunWith(AndroidJUnit4::class)
+@SmallTest
+@ExperimentalCoroutinesApi
 class NoteDatabaseTest : TestCase() {
-
     private lateinit var noteDao: NoteDao
     private lateinit var noteDatabase: NoteDatabase
 
     @Before
-    public override fun setUp() {
+    override fun setUp() {
         val ctx = ApplicationProvider.getApplicationContext<Context>()
         noteDatabase = Room.inMemoryDatabaseBuilder(
             ctx, NoteDatabase::class.java
-        ).build()
+        )
+            .allowMainThreadQueries()
+            .build()
         noteDao = noteDatabase.noteDao
     }
 
+    // execute after every test case
     @After
+    @Throws(IOException::class)
     fun closeDb() {
         noteDatabase.close()
     }
 
+    // test case to save a note
     @Test
-    fun writeAndRead() = runBlocking {
+    // @Throws(Exception::class)
+    fun saveNoteTestCase() = runBlocking {
         val note = Note(1, "Linux", "Learn processes")
         noteDao.saveNote(note)
         val notes = noteDao.fetchAllNotes()
-        // assertThat()
+        assertThat(notes)
     }
 }
