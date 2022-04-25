@@ -49,10 +49,8 @@ Build System: [Gradle](https://gradle.org/)
 <thead>
 <tr>
 <th align="center">Save Note</th>
-<th align="center">Delete Note</th>
 <th align="center">Update Note</th>
 <th align="center">Notes</th>
-<th align="center">No Note</th>
 </tr>
 </thead>
 <tbody>
@@ -60,7 +58,6 @@ Build System: [Gradle](https://gradle.org/)
 <td><img src="assets/save.png"></td>
 <td><img src="assets/update.png"></td>
 <td><img src="assets/all.png"></td>
-<td><img src="assets/empy.png"></td>
 </tr>
 </tbody>
 </table>
