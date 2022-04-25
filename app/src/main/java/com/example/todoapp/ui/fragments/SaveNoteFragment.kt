@@ -1,10 +1,10 @@
 package com.example.todoapp.ui.fragments
 
 import android.os.Bundle
-import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.fragment.findNavController
 import com.example.todoapp.R
@@ -23,7 +23,8 @@ class SaveNoteFragment : Fragment() {
     private lateinit var binding: FragmentSaveNoteBinding
 
     override fun onCreateView(
-        inflater: LayoutInflater, container: ViewGroup?,
+        inflater: LayoutInflater,
+        container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
         val noteDatabase = NoteDatabase.getDatabase(requireActivity())
@@ -42,7 +43,7 @@ class SaveNoteFragment : Fragment() {
                 }
                 description.isEmpty() -> {
                     binding.description.error = "Cannot be empty"
-                }else -> {
+                } else -> {
                     noteViewModel.saveNote(Note(0, title, description))
                     FancyToast.makeText(
                         activity,
