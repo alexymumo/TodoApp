@@ -25,7 +25,6 @@ import dagger.hilt.android.AndroidEntryPoint
 class HomeFragment : Fragment() {
     private lateinit var noteViewModel: NoteViewModel
     private lateinit var binding: FragmentHomeBinding
-    private lateinit var allNotes: List<Note>
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
@@ -43,37 +42,9 @@ class HomeFragment : Fragment() {
         }
         binding.recyclerview.layoutManager = LinearLayoutManager(activity)
         binding.recyclerview.adapter = adapter
-        val swipe = ItemTouchHelper(initSwipeDelete())
-        swipe.attachToRecyclerView(binding.recyclerview)
         binding.addNoteFab.setOnClickListener {
             findNavController().navigate(R.id.action_homeFragment_to_saveNoteFragment)
         }
         return binding.root
-    }
-
-    private fun initSwipeDelete(): ItemTouchHelper.SimpleCallback {
-        return object : ItemTouchHelper.SimpleCallback(
-            0, ItemTouchHelper.RIGHT
-        ) {
-            override fun onMove(
-                recyclerView: RecyclerView,
-                viewHolder: RecyclerView.ViewHolder,
-                target: RecyclerView.ViewHolder
-            ): Boolean {
-                return true
-            }
-            override fun onSwiped(viewHolder: RecyclerView.ViewHolder, direction: Int) {
-                val position = viewHolder.adapterPosition
-                noteViewModel.deleteNote(allNotes.get(position))
-                val note = allNotes.get(position)
-                FancyToast.makeText(
-                    activity,
-                    "Note Deleted",
-                    FancyToast.LENGTH_LONG,
-                    FancyToast.SUCCESS,
-                    true
-                ).show()
-            }
-        }
     }
 }
