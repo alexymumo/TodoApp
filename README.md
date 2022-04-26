@@ -60,10 +60,10 @@ Build System: [Gradle](https://gradle.org/)
 <tr>
 <td><img src="assets/empty.png"></td>
 <td><img src="assets/save-screen.png"></td>
-<td><img src="assets/save.png"></td>
-<td><img src="assets/update.png"></td>
-<td><img src="assets/all.png"></td>
-<td><img src="assets/delete.png"></td>
+<td><img src="assets/save1.png"></td>
+<td><img src="assets/update1.png"></td>
+<td><img src="assets/all1.png"></td>
+<td><img src="assets/delete1.png"></td>
 </tr>
 </tbody>
 </table>
