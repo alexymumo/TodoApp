@@ -9,4 +9,5 @@
     <string name="note_description">Note Description</string>
     <string name="update_note">Update Note</string>
     <string name="todo_app">Todo App</string>
+    <string name="colorpicker">colorpicker</string>
 </resources>

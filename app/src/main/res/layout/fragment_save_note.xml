@@ -45,6 +45,13 @@
             android:layout_height="match_parent"/>
     </com.google.android.material.textfield.TextInputLayout>
 
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/color_picker"
+        android:layout_margin="10dp"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:contentDescription="@string/colorpicker"/>
+
     <Button
         android:id="@+id/saveNote"
         android:backgroundTint="@color/teal_200"

@@ -10,17 +10,17 @@ import kotlinx.coroutines.launch
 
 class NoteViewModel(
     private val noteRepository: NoteRepository
-    ): ViewModel() {
+) : ViewModel() {
 
     val getAllNotes: LiveData<List<Note>> = noteRepository.fetchAllNotes()
 
-    fun saveNote(note: Note) = viewModelScope.launch(Dispatchers.IO){
+    fun saveNote(note: Note) = viewModelScope.launch(Dispatchers.IO) {
         noteRepository.saveNote(note)
     }
-    fun deleteNote(note: Note) = viewModelScope.launch(Dispatchers.IO){
+    fun deleteNote(note: Note) = viewModelScope.launch(Dispatchers.IO) {
         noteRepository.deleteNote(note)
     }
-    fun updateNote(note: Note) = viewModelScope.launch(Dispatchers.IO){
+    fun updateNote(note: Note) = viewModelScope.launch(Dispatchers.IO) {
         noteRepository.updateNote(note)
     }
 }

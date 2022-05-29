@@ -1,5 +1,6 @@
 package com.example.todoapp.ui.fragments
 
+import android.graphics.Color
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
@@ -30,6 +31,7 @@ class SaveNoteFragment : Fragment() {
         val noteDatabase = NoteDatabase.getDatabase(requireActivity())
         val noteRepository = NoteRepository(noteDatabase)
         val viewModelFactory = NoteViewModelFactory(noteRepository)
+        val color = Color.WHITE
         binding = FragmentSaveNoteBinding.inflate(inflater, container, false)
         noteViewModel = ViewModelProvider(this, viewModelFactory)[NoteViewModel::class.java]
 
@@ -44,7 +46,7 @@ class SaveNoteFragment : Fragment() {
                 description.isEmpty() -> {
                     binding.description.error = "Cannot be empty"
                 } else -> {
-                    noteViewModel.saveNote(Note(0, title, description))
+                    noteViewModel.saveNote(Note(0, title, description, color))
                     FancyToast.makeText(
                         activity,
                         "Note Saved",
