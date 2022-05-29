@@ -1,7 +1,7 @@
 package com.example.todoapp.data.dao
 
 import androidx.lifecycle.LiveData
-import androidx.room.*
+import androidx.room.* // ktlint-disable no-wildcard-imports
 import com.example.todoapp.data.entity.Note
 
 @Dao

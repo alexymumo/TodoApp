@@ -1,6 +1,7 @@
 package com.example.todoapp.test
 
 import android.content.Context
+import android.graphics.Color
 import androidx.room.Room
 import androidx.test.core.app.ApplicationProvider
 import androidx.test.ext.junit.runners.AndroidJUnit4
@@ -46,7 +47,7 @@ class NoteDatabaseTest : TestCase() {
     // test case to save a note
     @Test
     fun saveNoteTestCase() = runBlocking {
-        val note = Note(1, "Linux", "Learn processes")
+        val note = Note(1, "Linux", "Learn processes", Color.WHITE)
         noteDao.saveNote(note)
         val notes = noteDao.fetchAllNotes()
         assertThat(notes)
@@ -54,7 +55,7 @@ class NoteDatabaseTest : TestCase() {
 
     @Test
     fun deleteNoteTest() = runBlocking {
-        val note = Note(1, "Linux", "Learn processes")
+        val note = Note(1, "Linux", "Learn processes", Color.WHITE)
         noteDao.saveNote(note)
         noteDao.deleteNote(note)
         val notes = noteDao.fetchAllNotes()
@@ -62,7 +63,7 @@ class NoteDatabaseTest : TestCase() {
     }
     @Test
     fun updateNoteTest() = runBlocking{
-        val note = Note(1, "Linux", "Learn processes")
+        val note = Note(1, "Linux", "Learn processes", Color.WHITE)
         noteDao.saveNote(note)
         val newNote = note.copy(title = "Kotlin")
         noteDao.updateNote(newNote)

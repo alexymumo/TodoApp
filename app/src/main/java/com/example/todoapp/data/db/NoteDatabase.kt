@@ -10,7 +10,7 @@ import com.example.todoapp.data.entity.Note
 @Database(
     entities = [Note::class],
     exportSchema = false,
-    version = 1
+    version = 2
 )
 abstract class NoteDatabase : RoomDatabase() {
 
