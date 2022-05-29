@@ -40,8 +40,12 @@ class SaveNoteFragment : Fragment() {
         binding.colorPicker.setOnClickListener {
             ColorPickerDialog.Builder(activity)
                 .setTitle("Select Color")
+                .attachAlphaSlideBar(true)
+                .attachBrightnessSlideBar(true)
                 .setPreferenceName("ColorPickerDialog")
-                .setPositiveButton("Confirm", ColorEnvelopeListener { envelope, _ ->
+                .setPositiveButton(
+                    "Confirm",
+                    ColorEnvelopeListener { envelope, _ ->
                         binding.root.setBackgroundColor(envelope.color)
                         color = envelope.color
                     }
