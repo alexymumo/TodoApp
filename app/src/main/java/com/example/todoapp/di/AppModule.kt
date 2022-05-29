@@ -17,5 +17,6 @@ object AppModule {
     fun providesDao(noteDatabase: NoteDatabase): NoteDao {
         return noteDatabase.noteDao
     }
+
 }
 

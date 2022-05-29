@@ -42,30 +42,20 @@ Build System: [Gradle](https://gradle.org/)
 * [Material Design](https://material.io/develop/android/docs/getting-started/) - Build awesome beautiful UIs.
 * [LiveData](https://developer.android.com/topic/libraries/architecture/livedata) - Lifecycle aware.
 * [Timber](https://jakewharton.github.io/timber/docs/5.x/) - Logger with small and extensible API which provides on top normal Android normal Log class
+* [ColorPicker](https://github.com/skydoves/ColorPickerView) - Android colorpicker for getting colors from any images by tapping on the desired color.
 <br>
-  
+
 ## Screenshots
-<table>
-<thead>
-<tr>
-<th align="center">Empty Screen</th>
-<th align="center">Save Screen</th>
-<th align="center">Save Note</th>
-<th align="center">Update Note</th>
-<th align="center">All Notes</th>
-<th align="center">Delete Note</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><img src="assets/empty.png"></td>
-<td><img src="assets/save-screen.png"></td>
-<td><img src="assets/save1.png"></td>
-<td><img src="assets/update1.png"></td>
-<td><img src="assets/all1.png"></td>
-<td><img src="assets/delete1.png"></td>
-</tr>
-</tbody>
-</table>
+
+|<img src="assets/empty.png" width=250/>|<img src="assets/select.png" width=250/>|<img src="assets/save.png" width=250/>
+|:----:|:----:|:----:|
+
+|<img src="assets/delete.png" width=250/>|<img src="assets/update.png" width=250/>|
+|:----:|:----:|
+
+
+
+
+
 
 
