@@ -47,7 +47,7 @@ Build System: [Gradle](https://gradle.org/)
 
 ## Screenshots
 
-|<img src="assets/empty.png" width=250/>|<img src="assets/select.png" width=250/>|<img src="assets/save.png" width=250/>
+|<img src="assets/home.png" width=250/>|<img src="assets/select.png" width=250/>|<img src="assets/save.png" width=250/>
 |:----:|:----:|:----:|
 
 |<img src="assets/delete.png" width=250/>|<img src="assets/update.png" width=250/>|
