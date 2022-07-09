@@ -8,7 +8,6 @@ Build System: [Gradle](https://gradle.org/)
 <br>
 
 ## Table of Contents
-- [AbouttheApp](#abouttheapp)
 - [Prerequisite](#prerequisite)
 - [Architecture](#architecture)
 - [Introduction](#introduction)
